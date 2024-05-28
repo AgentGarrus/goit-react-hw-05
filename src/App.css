@@ -13,10 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul {
-  list-style: none;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -29,15 +25,24 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  padding-top: 60px;
   min-width: 320px;
   min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
 }
 
 h1 {
+  margin: 15px 0 15px 10px;
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+p,img {
+  margin-left: 10px;
+}
+
 
 button {
   border-radius: 8px;

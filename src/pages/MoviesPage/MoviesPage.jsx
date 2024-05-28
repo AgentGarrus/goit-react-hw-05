@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import MovieList from '../../components/MovieList/MovieList.jsx';
+import './MoviesPage.css';
 
 const MoviesPage = () => {
   const [query, setQuery] = useState('');
@@ -50,15 +51,15 @@ const MoviesPage = () => {
 
   return (
     <div>
-      <h1>Search Movies</h1>
-      <form onSubmit={handleSearch}>
+      <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Enter movie title"
+          className="search-input"
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="search-button">Search</button>
       </form>
       <MovieList movies={movies} />
     </div>
