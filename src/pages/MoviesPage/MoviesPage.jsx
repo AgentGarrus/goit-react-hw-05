@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import MovieList from '../../components/MovieList/MovieList.jsx';
 import './MoviesPage.css';
@@ -8,7 +8,6 @@ const MoviesPage = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
 
   const searchQuery = searchParams.get('query') || '';
 
@@ -41,7 +40,6 @@ const MoviesPage = () => {
     event.preventDefault();
     if (query) {
       setSearchParams({ query });
-      navigate(`/movies?query=${query}`);
     }
   };
 

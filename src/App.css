@@ -39,6 +39,10 @@ h1 {
   line-height: 1.1;
 }
 
+h3 {
+  margin-left: 30px;
+}
+
 p,img {
   margin-left: 10px;
 }
